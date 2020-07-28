@@ -1,0 +1,41 @@
+# 在用户目录下创建目录
+mkdir cli-practice
+
+# 在~/cli-practice目录下创建空白文件
+~/cli-practice$ touch readme.md
+
+# 在readme.md中添加一行文本
+~/cli-practice$ echo "Hi there, this is a readme file." > readme.md
+
+# 在readme.md中追加一行文本
+~/cli-practice$ echo "This is the second line of the readme" >> readme.md
+
+# 将readme.md文件名改为readme.txt
+~/cli-practice$ mv readme.md readme.txt
+
+# 创建目录~/cli-practice/document
+~/cli-practice$ mkdir document
+
+# 将~/cli-practice/readme.txt文件移动到~/cli-practice/document中，并改名为introduction.txt
+
+~/cli-practice$ mv readme.txt document/introduction.txt
+
+# 将~/cli-practice/document中的introduction.txt文件在~/cli-practice/document目录复制一份，并命名为readme.txt
+
+~/cli-practice/document$ cp introduction.txt readme.txt
+
+# 使用“The quick brown for jumps over a lazy dog”这行文本覆盖readme.txt中的内容
+~/cli-practice/document$ echo "The quick brown for jumps over a lazy dog" > readme.txt
+
+# 将~/cli-practice/document目录复制到~/cli-practice/doc,目录中的文件页要进行复制
+~/cli-practice$ cp -r document/ doc/
+
+# 删除~/cli-practice/document目录及其中文件
+~/cli-practice$ rm -r document/
+
+# 创建~/cli-practice/parent/child/docs目录
+~/cli-practice$ mkdir -p parent/child/docs/
+
+将~/cli-practice/doc/introduction.txt文件复制到~/cli-practice/parent/child/docs目录下
+~/cli-practice/doc$ cp introduction.txt ../parent/child/docs/
+
